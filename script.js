@@ -1,7 +1,9 @@
+// Reference to the toggle switch element
 const toggleSwitch = document.getElementById('mode-toggle');
+// Reference to the text showing the current mode
 const currentModeText = document.getElementById('current-mode');
 
-// Funktion zum Umschalten des Modus
+// Function to toggle between light and dark mode
 function toggleMode() {
     if (toggleSwitch.checked) {
         document.body.classList.add('dark-mode');
@@ -14,12 +16,12 @@ function toggleMode() {
     }
 }
 
-// Prüfen, ob eine Auswahl im lokalen Speicher vorhanden ist
+// Check if a theme preference is stored in local storage
 if (localStorage.getItem('theme') === 'dark') {
     toggleSwitch.checked = true;
     document.body.classList.add('dark-mode');
     currentModeText.textContent = 'Dunkel';
 }
 
-// Event Listener hinzufügen
+// Add event listener to toggle mode on change
 toggleSwitch.addEventListener('change', toggleMode);
