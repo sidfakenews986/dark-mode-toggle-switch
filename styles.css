@@ -1,3 +1,4 @@
+/* Base styles for the body element */
 body {
     font-family: Arial, sans-serif;
     transition: background-color 0.5s, color 0.5s;
@@ -5,11 +6,13 @@ body {
     color: black;
 }
 
+/* Dark mode styles for the body element */
 body.dark-mode {
     background-color: black;
     color: white;
 }
 
+/* Styles for the switch component */
 .switch {
     position: relative;
     display: inline-block;
@@ -23,6 +26,7 @@ body.dark-mode {
     height: 0;
 }
 
+/* Slider (track) styles */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -34,6 +38,7 @@ body.dark-mode {
     transition: .4s;
 }
 
+/* Slider thumb styles */
 .slider:before {
     position: absolute;
     content: "";
@@ -45,10 +50,12 @@ body.dark-mode {
     transition: .4s;
 }
 
+/* Change track color when checked */
 input:checked + .slider {
     background-color: #2196F3;
 }
 
+/* Move thumb when checked */
 input:checked + .slider:before {
     transform: translateX(26px);
 }
